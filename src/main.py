@@ -12,49 +12,54 @@ from storybuilder.assets import basic
 from storybuilder.assets import common_rubi
 from config import ASSET
 # import scenes
-# from scenes import xxx
+from scenes import Apart
+from scenes import Bridge
 
 
 ################################################################
 #
 #   1. Initialize
 #   2. Story memo
-#   3. Structure    - 1/8
+#   3. Structure    - 1/8: 1K
 #   4. Spec
-#   5. Plot         - 1/4
+#   5. Plot         - 1/4: 2.5K
 #   6. Scenes
-#   7. Conte        - 1/2
+#   7. Conte        - 1/2: 5K
 #   8. Layout
-#   9. Draft        - 1/1
+#   9. Draft        - 1/1: 10K
 #
 ################################################################
 
 # Constant
-TITLE = "作品タイトル"
-MAJOR, MINOR, MICRO = 0, 0, 1
-COPY = "コピィ"
-ONELINE = "一行説明"
-OUTLINE = "あらすじ"
-THEME = "テーマ"
-GENRE = "ジャンル"
-TARGET = "ターゲット（年代）"
-SIZE = "規定サイズ"
-CONTEST_INFO = "コンテスト情報"
-CAUTION = "注意事項"
-NOTE = "備考"
+TITLE = "夕暮れの笑顔が描けない"
+MAJOR, MINOR, MICRO = 1, 0, 0
+COPY = "口にしなければ壊れなかったのだろうか"
+ONELINE = "仲良し三人組を崩して恋人になった二人だったが"
+OUTLINE = "約一万字の恋愛短編。付き合っている彼を呼び出して別れようと切り出す。何故そこに至ったのかを彼女は語り始めた。"
+THEME = "真実を知ることで壊れてしまった"
+GENRE = "恋愛"
+TARGET = "20-30years(woman)"
+SIZE = "25から30枚相当"
+CONTEST_INFO = "コバルト短編小説新人賞209回"
+CAUTION = ""
+NOTE = "以前イラストコンテストに出したものの焼き直し"
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
-TAGS = ["ドラマ",]
+TAGS = ["恋愛",]
 RELEASED = (1, 1, 2020)
 
 
 # Episodes
-def ep_xxx(w: World):
-    return w.episode('episode_title',
-            outline="description")
+def ep_main(w: World):
+    return w.episode('別れ話',
+            Bridge.reunion(w),
+            Apart.her_truth(w),
+            w.symbol("（了）"),
+            )
 
 
 def ch_main(w: World):
     return w.chapter('main',
+            ep_main(w),
             )
 
 

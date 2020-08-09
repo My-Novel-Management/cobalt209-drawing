@@ -32,7 +32,7 @@ from scenes import Bridge
 
 # Constant
 TITLE = "夕暮れの笑顔が描けない"
-MAJOR, MINOR, MICRO = 1, 0, 0
+MAJOR, MINOR, MICRO = 2, 0, 0
 COPY = "口にしなければ壊れなかったのだろうか"
 ONELINE = "仲良し三人組を崩して恋人になった二人だったが"
 OUTLINE = "約一万字の恋愛短編。付き合っている彼を呼び出して別れようと切り出す。何故そこに至ったのかを彼女は語り始めた。"
@@ -45,7 +45,7 @@ CAUTION = ""
 NOTE = "以前イラストコンテストに出したものの焼き直し"
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
 TAGS = ["恋愛",]
-RELEASED = (1, 1, 2020)
+RELEASED = (8, 9, 2020)
 
 
 # Episodes
